@@ -2,32 +2,99 @@ body {
   margin: 0;
 }
 
+.search{
+  font-size: 2em;
+}
+
+::placeholder{
+  color: white;
+}
+
+.H1{
+  font-size: 3em;
+  font-weight:bold;
+  margin-top:1.3em;
+}
+
+.H{
+  font-size: 4em;
+  font-weight:bold;
+}
+
+.description{
+  font-size:2em;
+  font-weight:bold;
+  margin-top:2.7em;
+}
+
 .App:before {
   content: '';
   background: url('./assets/weather.png') no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0%;
-  left: 0%;
   z-index: -1;
 }
 
-.App .bottom{
+.bottom{
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   color: black;
   background-color: rgba(255,255,255,0.4);
-  margin: 1rem auto;
-  padding: 1rem;
+  margin: 1em auto;
+  padding: 1em;
   border-radius: 25px;
   width: 100%;
   font-weight: bold;
   font-family: monospace;
-  font-size: 15px;
+  font-size: 1em;
 }
 
-::placeholder{
-  color: white;
+.container{
+  margin-left:13.5em;
+  height:650px;
+}
+
+@media (max-width: 500px){
+
+  .div{
+    font-size: 0.4em;
+  }
+
+  .results{
+    font-size: 0.3em;
+    width: 100px;
+  }
+
+  .H1{
+    margin-left: 4em;
+  }
+
+  .H{
+    margin-left: -48em;
+  }
+
+  .description{
+    margin-left: -120em;
+    font-size: 3em;
+    margin-top: 1.7em;
+  }
+
+  .App:before {
+    height: 800px;
+    background: url('./assets/weather.png') no-repeat center center/cover;
+  }
+
+  .bottom{
+    font-size: 0.6em;
+    font-weight: bold;
+    width: 300px;
+    margin-bottom: 1em;
+  }
+
+  .container{
+    margin-left: 0.1em;
+    height: 580px;
+  }
 }

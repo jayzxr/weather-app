@@ -27,40 +27,20 @@ function App() {
     fontWeight:'bold',
   }
 
-  const H1 = {
-    fontSize: '4em',
-  }
-
-  const h = {
-    fontSize: '6em',
-    fontWeight:'bold',
-    marginTop:'1em'
-  }
-
-  const showDescription = {
-    fontSize:'2em',
-    fontWeight:'bold',
-  }
-
   const container ={
     maxWidth:'900px',
-    height:'700px',
-    margin:'auto',
-    padding:'0 1rem',
-    position:'relative',
-    top:'10%',
     display:'flex',
     flexDirection:'column',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
   }
 
   const results ={
-    position:'relative',
     display:'flex',
     textAlign:'center',
-    width:'1000px',
+    width:'1200px',
     justifyContent:'space-between',
-    marginLeft:'-4em'
+    marginLeft:'-10em',
+    padding:'10px',
   }
 
   const inputdiv = {
@@ -70,7 +50,6 @@ function App() {
 
   const search = {
     padding: '0.7rem 1.5rem',
-    fontSize:'2em',
     borderRadius:'20px',
     fontFamily:'Courier New, monospace',
     border:'1px solid rgba(255,255,255,0.8)',
@@ -99,8 +78,9 @@ function App() {
 
   return (
     <div className="App" style={background}>
-      <div style={inputdiv}>
+      <div className='div' style={inputdiv}>
         <input
+          className="search"
           value={Location}
           type='text'
           onChange={event => setLocation(event.target.value)}
@@ -109,17 +89,17 @@ function App() {
           style={search}>
         </input>
       </div>
-      <div style={container}>
+      <div style={container} className='container'>
         <div>
-          <div style={results}>
+          <div className="results" style={results}>
             <div>
-              <h1 style={H1}>{Name}</h1>
+              <h1 className="H1">{Name}</h1>
             </div>
-            <div style={{ marginLeft:'3em', marginTop:'1em' }}>
-              {Name?<h style={h}>{Temperature}'F</h>:null}
+            <div style={{ marginTop:'3em' }}>
+              {Name?<h className='H'>{Temperature}'F</h>:null}
             </div>
-            <div style={{ marginLeft:'3em', marginTop:'2em' }}>
-              <p style={showDescription}>{Description}</p>
+            <div style={{ marginTop:'-1em' }}>
+              <p className='description'>{Description}</p>
             </div>
           </div>
         </div>
